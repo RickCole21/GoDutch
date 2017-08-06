@@ -1,0 +1,25 @@
+{
+  "name": "godutch",
+  "version": "1.0.0",
+  "description": "a godutch web-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RickCole21/godutch.git"
+  },
+  "author": "Rick Cole",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RickCole21/godutch/issues"
+  },
+  "homepage": "https://github.com/RickCole21/godutch#readme",
+  "devDependencies": {
+    "concurrently": "^3.5.0"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
