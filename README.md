@@ -5,3 +5,4 @@ a godutch web-app
 in Documents directory:
 
 `mongod --dbpath /data/db` 
+Created By Rick Cole
