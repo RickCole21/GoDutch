@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from "./component/Header";
 import Clock from "./component/Clock";
+import SiteSearch from './component/SiteSearch';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
         <p className="App-intro">
           想要开始, 编辑 <code>src/App.js</code> 然后保存后重载.
         </p>
+        <SiteSearch/>
       </div>
     );
   }
