@@ -1,10 +1,10 @@
 // 本地测试时，需要先打开 mongodb : cd Documents --> mongod --dbpath data/db
 var MongoClient = require('mongodb').MongoClient;
-var DB_CONN_STR = 'mongodb://localhost:27017/test';
+var DB_CONN_STR = 'mongodb://localhost:27017/godutch';
 
 var selectData = function (db, callback) {
   //连接到表
-  var collection = db.collection('site');
+  var collection = db.collection('user');
   //查询数据
   var whereStr = {
     "username": 'rickcole'
