@@ -7,12 +7,16 @@ var insertData = function (db, callback) {
   //连接到表 user
   var collection = db.collection('user');
   //插入数据
+  // var data = [{
+  //   "username": "rickcole",
+  //   "password": "111"
+  // }, {
+  //   "username": "coco",
+  //   "password": "222"
+  // }];
   var data = [{
-    "username": "rickcole",
-    "password": "111"
-  }, {
-    "username": "coco",
-    "password": "222"
+    "username": "test",
+    "password": "test"
   }];
   collection.insert(data, function (err, result) {
     if (err) {
