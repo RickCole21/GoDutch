@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "express": "^4.15.3",
-    "mongodb": "^2.2.30"
+    "mongodb": "^2.2.30",
+    "react-router-dom": "^4.2.2"
   }
 }
