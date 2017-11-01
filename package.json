@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "node server.js",
+    "start": "concurrently \"npm run app\" \"npm run client\"",
+    "app": "node app.js",
     "client": "node start-client.js"
   },
   "repository": {
@@ -23,9 +23,12 @@
     "concurrently": "^3.5.0"
   },
   "dependencies": {
-    "express": "^4.15.3",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
     "mongodb": "^2.2.30",
     "react-bootstrap": "^0.31.3",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "superagent": "^3.8.0",
+    "utility": "^1.13.1"
   }
 }
