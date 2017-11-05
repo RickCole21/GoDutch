@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
+/* 引入组件 */
 import Login from './component/Login'
 
 const Home = () => (
