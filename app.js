@@ -56,8 +56,10 @@ app.all('*', function (req, res, next) {
 // });
 
 var route_login = require('./routes/login');
+var route_register = require('./routes/register');
 
 app.post('/login', route_login);
+app.post('/register', route_register);
 
 // app.post('/login', (req, res) => {
 //   console.log('接收到的数据：', req.body);

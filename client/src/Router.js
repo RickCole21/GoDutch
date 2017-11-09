@@ -1,10 +1,11 @@
 import React from 'react'
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Link
 } from 'react-router-dom'
-/* 引入组件 */
 import Login from './component/Login'
+import Register from './component/Register'
 
 const Home = () => (
   <div>
@@ -12,21 +13,21 @@ const Home = () => (
   </div>
 )
 
-const Router = () => (
+const BasicExample = () => (
   <Router>
     <div>
-      {/*<ul>*/}
-      {/*<li><Link to="/">Home</Link></li>*/}
-      {/*<li><Link to="/about">About</Link></li>*/}
-      {/*<li><Link to="/topics">Topics</Link></li>*/}
-      {/*<li><Link to="/login">Login</Link></li>*/}
-      {/*</ul>*/}
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/register">Register</Link></li>
+        <li><Link to="/login">Login</Link></li>
+      </ul>
 
-      {/*<hr/>*/}
+      <hr/>
 
       <Route exact path="/" component={Home}/>
       <Route path="/login" component={Login}/>
+      <Route path="/register" component={Register}/>
     </div>
   </Router>
 )
-export default Router;
+export default BasicExample
