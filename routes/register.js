@@ -1,7 +1,7 @@
 // 本地测试时，需要先打开 mongodb : cd Documents --> mongod --dbpath data/db
 var MongoClient = require('mongodb').MongoClient;
-var DB_CONN_STR = 'mongodb://RickCole:.dante2226120@getstarted-shard-00-00-ambre.mongodb.net:27017,getstarted-shard-00-01-ambre.mongodb.net:27017,getstarted-shard-00-02-ambre.mongodb.net:27017/godutch?ssl=true&replicaSet=GetStarted-shard-0&authSource=admin';
-// var DB_CONN_STR = 'mongodb://localhost:27017/godutch';
+// var DB_CONN_STR = 'mongodb://RickCole:.dante2226120@getstarted-shard-00-00-ambre.mongodb.net:27017,getstarted-shard-00-01-ambre.mongodb.net:27017,getstarted-shard-00-02-ambre.mongodb.net:27017/godutch?ssl=true&replicaSet=GetStarted-shard-0&authSource=admin';
+var DB_CONN_STR = 'mongodb://localhost:27017/godutch';
 
 var insertData = function (db, param, res) {
   //连接到表
