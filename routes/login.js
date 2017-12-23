@@ -44,7 +44,6 @@ var selectData = function (db, param, res) {
   });
 }
 
-
 module.exports = function (req, res) {
   console.log('接收到的数据：', req.body);
 
@@ -53,4 +52,4 @@ module.exports = function (req, res) {
     selectData(db, req.body, res);
     db.close();
   });
-}
+};

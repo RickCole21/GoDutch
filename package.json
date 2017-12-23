@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/RickCole21/godutch#readme",
   "devDependencies": {
-    "concurrently": "^3.5.0"
+    "concurrently": "^3.5.0",
+    "express-session": "^1.15.6"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
