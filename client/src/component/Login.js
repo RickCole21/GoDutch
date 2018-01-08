@@ -38,7 +38,7 @@ class Login extends Component {
   login(e) {
     e.preventDefault();
 
-    var url = 'http://localhost:3001/login';
+    var url = 'http://localhost:3001/api/login';
     // var url = 'http://192.168.199.173:3001'
     var data = {
       username: this.state.username,
@@ -48,6 +48,7 @@ class Login extends Component {
     fetch(url, {
       method: 'POST',
       mode: 'cors',
+      credentials: 'include',
       headers: {
         "Content-Type": "application/json",
         "Accept": 'application/json'
@@ -55,7 +56,13 @@ class Login extends Component {
       body: JSON.stringify(data)
     })
       .then(res => res.json())
-      .then(res => console.log(res))
+      .then(res => {
+        if (res.errorCode === 0) {
+          this.props.history.push('/');
+        } else {
+          console.log('登录失败：', res);
+        }
+      })
       .catch(e => console.log('oops error:', e));
   }
 
@@ -82,13 +89,10 @@ class Login extends Component {
 
           <FormGroup>
             <Col xsOffset={1} xs={10}>
-              <Button type="submit" block>
-                登录
-              </Button>
+              <Button type="submit" block>登录</Button>
             </Col>
           </FormGroup>
         </Form>
-
       </div>
     )
   }

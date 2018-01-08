@@ -6,12 +6,7 @@ import {
 } from 'react-router-dom'
 import Login from './component/Login'
 import Register from './component/Register'
-
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-  </div>
-)
+import Home from './component/Home'
 
 const BasicExample = () => (
   <Router>

@@ -3,12 +3,12 @@ var MongoClient = require('mongodb').MongoClient;
 // var DB_CONN_STR = 'mongodb://RickCole:.dante2226120@getstarted-shard-00-00-ambre.mongodb.net:27017,getstarted-shard-00-01-ambre.mongodb.net:27017,getstarted-shard-00-02-ambre.mongodb.net:27017/godutch?ssl=true&replicaSet=GetStarted-shard-0&authSource=admin';
 var DB_CONN_STR = 'mongodb://localhost:27017/godutch';
 
-var selectData = function (db, param, res) {
+var selectData = function (db, req, res) {
   //连接到表
   var collection = db.collection('user');
   //查询数据
   var userIsExisted = {
-    "username": param.username
+    "username": req.body.username
   };
 
   collection.find(userIsExisted).toArray(function (err, result) {
@@ -18,17 +18,17 @@ var selectData = function (db, param, res) {
     }
 
     if (!result.length) {
-      console.log('查询成功，' + '用户:' + param.username + ' 不存在!');
+      console.log('查询成功，' + '用户:' + req.body.username + ' 不存在!');
       res.send({
         errorCode: '0',
-        msg: '用户:' + param.username + ' 不存在'
+        msg: '用户:' + req.body.username + ' 不存在'
       });
       return;
     }
 
     var dbPassword = result[0].password;
 
-    if (dbPassword !== param.password) {
+    if (dbPassword !== req.body.password) {
       console.log('查询成功，' + '密码错误!');
       res.send({
         errorCode: '0',
@@ -37,8 +37,10 @@ var selectData = function (db, param, res) {
       return;
     }
 
+    // 存session
+    req.session.user = result[0];
     res.send({
-      errorCode: '0',
+      errorCode: 0,
       msg: '登陆成功!'
     });
   });
@@ -49,7 +51,7 @@ module.exports = function (req, res) {
 
   MongoClient.connect(DB_CONN_STR, function (err, db) {
     console.log("数据库连接成功！");
-    selectData(db, req.body, res);
+    selectData(db, req, res);
     db.close();
   });
 };

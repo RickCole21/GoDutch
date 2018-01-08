@@ -38,7 +38,7 @@ class Register extends Component {
   login(e) {
     e.preventDefault();
 
-    var url = 'http://localhost:3001/register';
+    var url = 'http://localhost:3001/api/register';
     // var url = 'http://192.168.199.173:3001'
     var data = {
       username: this.state.username,
@@ -48,10 +48,11 @@ class Register extends Component {
     fetch(url, {
       method: 'POST',
       mode: 'cors',
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": 'application/json'
-      },
+      credentials: 'include',
+      // headers: {
+      //   "Content-Type": "application/json",
+      //   "Accept": 'application/json'
+      // },
       body: JSON.stringify(data)
     })
       .then(res => res.json())
