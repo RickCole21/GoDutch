@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Header from "./component/Header";
-import Clock from "./component/Clock";
-import SiteSearch from './component/SiteSearch';
+import Header from "./component/study/Header";
+import Clock from "./component/study/Clock";
+import SiteSearch from './component/study/SiteSearch';
 
 class App extends Component {
   render() {

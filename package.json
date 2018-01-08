@@ -20,13 +20,13 @@
   },
   "homepage": "https://github.com/RickCole21/godutch#readme",
   "devDependencies": {
-    "concurrently": "^3.5.0",
-    "express-session": "^1.15.6"
+    "concurrently": "^3.5.0"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.2",
+    "express-session": "^1.15.6",
     "mongodb": "^2.2.30",
     "multer": "^1.3.0",
     "react-bootstrap": "^0.31.3",

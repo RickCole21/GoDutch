@@ -14,7 +14,5 @@
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:3001/",
-  "devDependencies": {
-    "express-session": "^1.15.6"
-  }
+  "devDependencies": {}
 }
