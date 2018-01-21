@@ -67,9 +67,12 @@ class Register extends Component {
         <Form horizontal onSubmit={this.login}>
           <FormGroup controlId="username">
             <Col xsOffset={1} xs={10}>
-              <FormControl type="text" placeholder="请输入手机号"
-                           value={this.state.username}
-                           onChange={this.handleChange}/>
+              <FormControl
+                type="text"
+                placeholder="请输入手机号"
+                value={this.state.username}
+                onChange={this.handleChange}
+              />
             </Col>
           </FormGroup>
 

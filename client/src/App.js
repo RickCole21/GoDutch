@@ -1,27 +1,24 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Header from "./component/study/Header";
-import Clock from "./component/study/Clock";
-import SiteSearch from './component/study/SiteSearch';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Header/>
-        <Clock/>
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo"/>
-          <h2>欢迎来到Rick's World</h2>
-        </div>
-        <p className="App-intro">
-          想要开始, 编辑 <code>src/App.js</code> 然后保存后重载.
-        </p>
-        <SiteSearch/>
-      </div>
-    );
-  }
-}
+import Login from './component/Login';
+import Register from './component/Register';
+import Home from './component/Home';
+import Room from './component/Room';
+import Mine from './component/Mine';
 
-export default App;
+const Routes = () => (
+  <Router>
+    <div>
+      <Route exact path="/" component={Home}/>
+      <Route path="/login" component={Login}/>
+      <Route path="/register" component={Register}/>
+      <Route path="/room" component={Room}/>
+      <Route path="/mine" component={Mine}/>
+    </div>
+  </Router>
+)
+export default Routes;

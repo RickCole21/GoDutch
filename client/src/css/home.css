@@ -1,0 +1,11 @@
+.panel-title {
+  text-align: center;
+  font-size: 20px;
+}
+
+.logoutSpan {
+  position: absolute;
+  right: 10px;
+  font-size: 12px;
+  top: 15px
+}
