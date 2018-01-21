@@ -32,7 +32,6 @@ app.all('*', function (req, res, next) {
   next();
 });
 
-//         });
 var routeLogin = require('./routes/login');
 var routeRegister = require('./routes/register');
 var routeUser = require('./routes/user');
