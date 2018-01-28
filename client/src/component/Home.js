@@ -207,8 +207,7 @@ class Home extends Component {
         <LinkContainer
           key={index}
           to={{
-            pathname: '/room',
-            search: '?id=' + room.id
+            pathname: '/room/' + room.id,
           }}
         >
           <Media>
@@ -244,7 +243,7 @@ class Home extends Component {
           </Panel.Body>
 
         </Panel>
-        <Tabbar></Tabbar>
+        <Tabbar/>
       </div>
     )
   }

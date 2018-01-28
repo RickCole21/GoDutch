@@ -23,21 +23,26 @@ class Tabbar extends Component {
   }
 
   render() {
-    var tabberStyle = {
-      position: 'fixed',
-      bottom: 0,
-      height: '45px'
-    }
     return (
-      <div>
-        <ButtonGroup style={tabberStyle} justified>
-          <LinkContainer to="/">
-            <Button to="/">主页</Button>
-          </LinkContainer>
-          <LinkContainer to="/mine">
-            <Button to="/mine">我的</Button>
-          </LinkContainer>
-        </ButtonGroup>
+      <div className="tab-bar">
+        {/*<ButtonGroup style={tabberStyle} justified>*/}
+        {/*<LinkContainer to="/">*/}
+        {/*<Button to="/">主页</Button>*/}
+        {/*</LinkContainer>*/}
+        {/*<LinkContainer to="/mine">*/}
+        {/*<Button to="/mine">我的</Button>*/}
+        {/*</LinkContainer>*/}
+        {/*</ButtonGroup>*/}
+        <LinkContainer to="/">
+          <div className="tab">
+            主页
+          </div>
+        </LinkContainer>
+        <LinkContainer to="/mine">
+          <div className="tab">
+            我的
+          </div>
+        </LinkContainer>
       </div>
     )
   }

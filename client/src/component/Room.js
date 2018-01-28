@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import Tabbar from './Tabbar';
 
-import {getUrlParamByKey} from '../js/util';
+// import {getUrlParamByKey} from '../js/util';
 
 
 class Room extends Component {
 
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor(props) {
+    super(props);
+  }
 
   render() {
-    let id = getUrlParamByKey('id');
+    var id = this.props.match.params.id;
     return (
       <div>
         id:{id}

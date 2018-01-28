@@ -5,7 +5,8 @@ import {
   FormControl,
   Col,
   Button,
-  PageHeader
+  PageHeader,
+  Modal
 } from 'react-bootstrap';
 
 import '../css/login.css';
@@ -16,25 +17,26 @@ class Login extends Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      showModal: false,
+      modalMsg: ''
     }
 
-    this.login = this.login.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.login = this.login.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   handleChange(e) {
     this.setState({
       [e.target.id]: e.target.value
     });
-
-    // var inputId = e.target.id;
-    // var state = {};
-    // state[inputId] = e.target.value;
-    // console.log(state)
-    // this.setState(state);
   }
 
+  /**
+   * 登录按钮实现
+   * @param e
+   */
   login(e) {
     e.preventDefault();
 
@@ -60,11 +62,22 @@ class Login extends Component {
         if (res.errorCode === 0) {
           this.props.history.push('/');
         } else {
+          this.setState({
+            showModal: true,
+            modalMsg: res.msg
+          });
           console.log('登录失败：', res);
         }
       })
       .catch(e => console.log('oops error:', e));
   }
+
+  closeModal() {
+    this.setState({
+      showModal: false
+    })
+  }
+
 
   render() {
     return (
@@ -93,6 +106,18 @@ class Login extends Component {
             </Col>
           </FormGroup>
         </Form>
+
+        <Modal show={this.state.showModal} onHide={this.closeModal}>
+          <Modal.Header closeButton>
+            <Modal.Title>系统提示</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <h4>{this.state.modalMsg}</h4>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={this.closeModal}>关闭</Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     )
   }

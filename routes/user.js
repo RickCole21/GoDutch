@@ -20,7 +20,7 @@ var selectData = function (db, param, res) {
     if (!result.length) {
       console.log('查询成功，' + '用户:' + param.username + ' 不存在!');
       res.send({
-        errorCode: 0,
+        errorCode: 1,
         msg: '用户:' + param.username + ' 不存在'
       });
       return;

@@ -20,7 +20,7 @@ var selectData = function (db, req, res) {
     if (!result.length) {
       console.log('查询成功，' + '用户:' + req.body.username + ' 不存在!');
       res.send({
-        errorCode: 0,
+        errorCode: 1,
         msg: '用户:' + req.body.username + ' 不存在'
       });
       return;
@@ -31,7 +31,7 @@ var selectData = function (db, req, res) {
     if (dbPassword !== req.body.password) {
       console.log('查询成功，' + '密码错误!');
       res.send({
-        errorCode: 0,
+        errorCode: 1,
         msg: '密码错误！'
       });
       return;

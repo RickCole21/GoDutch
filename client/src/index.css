@@ -29,3 +29,21 @@ body {
   margin: 0;
   color: #888;
 }
+
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  height: 45px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.tab-bar .tab {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  float: left;
+  line-height: 45px;
+  text-align: center;
+  border-top: 1px solid #b3b9c0;
+}
