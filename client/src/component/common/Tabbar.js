@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
-import {
-  ButtonGroup,
-  Button,
-} from 'react-bootstrap';
+// import {
+//   ButtonGroup,
+//   Button,
+// } from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
+
+import '../../css/common/tabber.css'
 
 class Tabbar extends Component {
 
@@ -35,12 +37,12 @@ class Tabbar extends Component {
         {/*</ButtonGroup>*/}
         <LinkContainer to="/">
           <div className="tab">
-            主页
+            <i className="fa fa-home"></i>
           </div>
         </LinkContainer>
         <LinkContainer to="/mine">
           <div className="tab">
-            我的
+            <i className="fa fa-user"></i>
           </div>
         </LinkContainer>
       </div>

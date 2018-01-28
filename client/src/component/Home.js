@@ -5,7 +5,7 @@ import {
 } from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
 
-import Tabbar from './Tabbar';
+import Tabbar from './common/Tabbar';
 
 import '../css/home.css'
 

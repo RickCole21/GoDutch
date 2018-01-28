@@ -9,3 +9,44 @@
   font-size: 12px;
   top: 15px
 }
+
+.panel {
+  margin: 0;
+  border: 0;
+}
+
+.panel > .panel-heading {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.panel > .panel-body {
+  margin: 43px 0 45px;
+}
+
+.media img {
+  border-radius: 5px;
+}
+
+.media-heading {
+  font-size: 16px;
+}
+
+.media-heading small {
+  float: right;
+}
+
+.media-body {
+  border-bottom: 1px solid #eaeaea;
+  vertical-align: middle;
+}
+
+.media-body p {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  color: #888;
+}

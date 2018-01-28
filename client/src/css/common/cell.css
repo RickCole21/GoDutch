@@ -1,0 +1,31 @@
+.cell {
+  height: 50px;
+  display: flex;
+  padding: 15px 20px;
+  -webkit-align-items: center;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.cell:active {
+  background-color: #222222;
+}
+
+.cell:hover {
+  background-color: #222222;
+}
+
+.cell-icon i {
+  font-size: 20px;
+}
+
+.cell-body {
+  margin-left: 20px;
+  font-size: 16px;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.cell-body p {
+  margin: 0;
+}

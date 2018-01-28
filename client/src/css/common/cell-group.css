@@ -1,0 +1,8 @@
+.cell-group {
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.cell-group .cell:last-child {
+  border: 0;
+}

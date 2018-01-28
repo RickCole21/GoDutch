@@ -1,0 +1,22 @@
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  height: 45px;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #e8e8e8;
+}
+
+.tab-bar .tab {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  float: left;
+  line-height: 45px;
+  text-align: center;
+}
+
+.tab i {
+  font-size: 25px;
+  margin-top: 10px;
+}

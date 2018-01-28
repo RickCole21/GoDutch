@@ -1,0 +1,29 @@
+.avatar-wrapper {
+  height: 90px;
+  margin-top: 10px;
+  display: flex;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.avatar-wrapper:after {
+  content: '>';
+  position: absolute;
+  right: 15px;
+  top: 45px;
+  color: #bdbdbd;
+}
+
+/*.avatar {*/
+/*width:;*/
+/*}*/
+
+.avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+}
+
+.avatar-info {
+  padding-left: 20px;
+}

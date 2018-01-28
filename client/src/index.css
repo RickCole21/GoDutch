@@ -1,49 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: transparent;
 }
 
-.media img {
-  border-radius: 5px;
-}
-
-.media-heading {
-  font-size: 16px;
-}
-
-.media-heading small {
-  float: right;
-}
-
-.media-body {
-  border-bottom: 1px solid #e4e4e4;
-  vertical-align: middle;
-}
-
-.media-body p {
-  font-size: 12px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin: 0;
-  color: #888;
-}
-
-.tab-bar {
-  position: fixed;
-  bottom: 0;
-  height: 45px;
-  width: 100%;
-  background-color: #fff;
-}
-
-.tab-bar .tab {
-  box-sizing: border-box;
-  width: 50%;
-  height: 100%;
-  float: left;
-  line-height: 45px;
-  text-align: center;
-  border-top: 1px solid #b3b9c0;
-}

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Tabbar from './Tabbar';
+// import Tabbar from './common/Tabbar';
 
 // import {getUrlParamByKey} from '../js/util';
 
@@ -15,7 +15,7 @@ class Room extends Component {
     return (
       <div>
         id:{id}
-        <Tabbar></Tabbar>
+        {/*<Tabbar></Tabbar>*/}
       </div>
     )
   }
